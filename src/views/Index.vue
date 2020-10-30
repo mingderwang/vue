@@ -4,9 +4,7 @@
       <sp-sign-in />
       <sp-bank-balances />
       <sp-token-send />
-      <sp-type-form type="post" :fields="['title', 'body']" />
-      <sp-type-form type="post" :fields="['title', 'body']" module="foo" />
-      <sp-type-form type="post" :fields="['title', 'body']" module="bar" />
+      <sp-type-form type="identifier" :fields="['diddoc', ]" module="did" />
     </div>
   </div>
 </template>
