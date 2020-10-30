@@ -196,7 +196,7 @@ export default {
     IconLock3,
     IconMagic1,
   },
-  props: ["foo"],
+  props: ["myDID"],
   data() {
     return {
       mnemonic: "",

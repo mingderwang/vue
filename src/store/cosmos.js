@@ -68,11 +68,15 @@ export default {
         );
         localStorage.setItem("mnemonic", mnemonic);
         const [{ address }] = await wallet.getAccounts();
+        console.log(address)
         const url = `${API}/auth/accounts/${address}`;
         const acc = (await axios.get(url)).data;
+        console.log(acc)
         const account = acc.result.value;
+        console.log(account)
         commit("set", { key: "account", value: account });
         const client = new SigningCosmosClient(API, address, wallet);
+        console.log(client)
         commit("set", { key: "client", value: client });
         // // dispatch("delegationsFetch");
         // // dispatch("transfersIncomingFetch");
@@ -104,6 +108,7 @@ export default {
         amount: coins(0, denom),
         gas: "200000",
       };
+      console.log({fee,msg})
       return await state.client.signAndPost([msg], fee, memo);
     },
     async bankBalancesGet({ commit, state }) {
@@ -132,6 +137,7 @@ export default {
       const req = { base_req, creator, ...body };
       const module_name = module || chain_id;
       const { data } = await axios.post(`${API}/${module_name}/${type}`, req);
+      console.log(data)
       const { msg, fee, memo } = data.value;
       return await state.client.signAndPost(msg, fee, memo);
     },
