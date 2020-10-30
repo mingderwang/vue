@@ -4,9 +4,9 @@
       <sp-sign-in />
       <sp-bank-balances />
       <sp-token-send />
-      <sp-type-form type="post" :fields="['title', 'body']" />
-      <sp-type-form type="post" :fields="['title', 'body']" module="foo" />
-      <sp-type-form type="post" :fields="['title', 'body']" module="bar" />
+            <!-- this line is used by starport scaffolding # 4 -->
+		<sp-type-form type="did" :fields="[]" module="did" />
+    <sp-type-form type="resolver" :fields="['did', 'did_doc', ]" module="did" />
     </div>
   </div>
 </template>
