@@ -83,7 +83,7 @@ export default {
         commit("set", { key: "did", value: did })
         const doc = {
           "@context": [
-            "https://w3id.org/did/v0.11"
+            "https://www.w3.org/ns/did/v1"
           ],
           "id": did,
           "authentication": [
@@ -98,7 +98,7 @@ export default {
                 {
                   "id": did + '#cvs',
                   "type": "VerifiableCredentialService",
-                  "serviceEndpoint": "http://cosmos.did.muzamint.com/vc/"
+                  "serviceEndpoint": "http://cosmos-did.muzamint.com/vc/"
                 }
               ]
         }
