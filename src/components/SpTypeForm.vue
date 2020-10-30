@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container">
-      <sp-h3>New {{ type }}</sp-h3>
+      <sp-h3>Register your DID</sp-h3>
       <div v-for="field in fields" :key="field">
         <sp-input
           v-model="fieldsList[field]"
@@ -16,11 +16,11 @@
           :disabled="!valid || !hasAddress || flight"
           @click="submit"
         >
-          Create {{ type }}
+          Submit 
         </sp-button>
       </div>
       <sp-h3
-        >List of {{ type }} items {{ module && `in module ${module}` }}</sp-h3
+        >List of all registered DIDs</sp-h3
       >
       <div class="item" v-for="instance in instanceList" :key="instance.id">
         <div class="item__field" v-for="(value, key) in instance" :key="key">
@@ -139,7 +139,8 @@ export default {
   },
   methods: {
     title(string) {
-      return string.charAt(0).toUpperCase() + string.slice(1);
+    //  return string.charAt(0).toUpperCase() + string.slice(1);
+    return 'meta data'
     },
     async submit() {
       if (this.valid && !this.flight && this.hasAddress) {

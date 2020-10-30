@@ -1,7 +1,7 @@
 {
   "name": "@tendermint/vue",
   "description": "A library of Vue.js components for Cosmos SDK apps",
-  "version": "0.1.8",
+  "version": "1.0.0",
   "main": "src/index.js",
   "repository": "https://github.com/tendermint/vue",
   "scripts": {
@@ -13,6 +13,7 @@
     "@cosmjs/launchpad": "^0.22.2",
     "axios": "^0.20.0",
     "bip39": "^3.0.2",
+    "bs58": "^4.0.1",
     "core-js": "^3.6.5",
     "lodash": "^4.17.20",
     "vue": "^2.6.11",
